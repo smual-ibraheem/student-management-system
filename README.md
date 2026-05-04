@@ -1,8 +1,8 @@
 # 🎓 Student Management System
 
-A clean and well-structured **Java console application** for managing students, built using solid **Object-Oriented Programming (OOP)** principles and a layered architecture.
+> A production-style Java console application for managing students, designed using layered architecture and strong Object-Oriented Programming (OOP) principles.
 
-This project focuses on writing production-style code without frameworks, as a strong foundation before moving to Spring Boot.
+This project simulates how real backend systems are structured before introducing frameworks like Spring Boot, with a focus on separation of concerns, clarity, and maintainable code.
 
 ---
 
@@ -19,37 +19,38 @@ This project focuses on writing production-style code without frameworks, as a s
 
 ## 🧠 Architecture Overview
 
-The system follows a **layered architecture (Separation of Concerns)**:
+The system follows a layered architecture (Separation of Concerns):
 
-* **Model Layer**
+### Model Layer
 
-    * Represents core entities (`Student`, `StudentStatus`)
-    * Handles validation and encapsulation
+* Represents core domain entities (`Student`, `StudentStatus`)
+* Encapsulates data and enforces basic validation rules
 
-* **Repository Layer**
+### Repository Layer
 
-    * Abstracts data access (`StudentRepository`)
-    * In-memory implementation (`InMemoryStudentRepository`)
+* Abstracts data access via `StudentRepository`
+* In-memory implementation via `InMemoryStudentRepository`
+* Designed for easy replacement with a real database
 
-* **Service Layer**
+### Service Layer
 
-    * Contains business logic (`StudentService`)
-    * Manages validation and use cases
+* Contains business logic (`StudentService`)
+* Coordinates validation and use-case execution
 
-* **UI Layer**
+### UI Layer
 
-    * Console-based interaction (`Main`)
-    * Handles user input/output
+* Console-based interface (`Main`)
+* Handles user interaction and input/output flow
 
 ---
 
 ## 🧩 Design Highlights
 
-* Clean separation between layers
-* Use of a **Result pattern** for predictable responses instead of exceptions
+* Clear separation between layers (high cohesion, low coupling)
+* Explicit Result pattern to model operation outcomes instead of relying on exceptions for flow control
 * Encapsulated domain model with internal validation
-* Repository abstraction (ready to be replaced with database later)
-* Simple and readable console-based user experience
+* Repository abstraction (database-ready design)
+* Simple, readable, and predictable console workflow
 
 ---
 
@@ -78,18 +79,15 @@ Student info:
 ## 🛠️ Tech Stack
 
 * Java (Core Java)
-* OOP (Encapsulation, Abstraction, Separation of Concerns)
+* Object-Oriented Programming (OOP)
+* Layered Architecture (Separation of Concerns)
 * Console Application
 
 ---
 
 ## 🎯 Project Purpose
 
-This project was built as a **preparation step before learning Spring Boot**, with a focus on:
-
-* Writing clean and maintainable code
-* Understanding application structure (layers)
-* Practicing backend logic without frameworks
+This project was built to simulate how real backend systems are structured before introducing frameworks, ensuring a solid understanding of core architectural decisions that are often abstracted away by frameworks like Spring Boot.
 
 ---
 
@@ -98,10 +96,10 @@ This project was built as a **preparation step before learning Spring Boot**, wi
 * Update student information
 * Email uniqueness validation
 * Database integration (JPA / Hibernate)
-* REST API with Spring Boot
+* REST API using Spring Boot
 
 ---
 
 ## 👨‍💻 Author
 
-Built with focus and discipline as part of a backend development journey.
+Built with focus on writing clean, structured, and maintainable backend code as part of a journey toward becoming a professional backend developer.
